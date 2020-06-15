@@ -10,7 +10,7 @@ namespace BigSchool.Models
     {
         public int Id { get; set; }
 
-        public bool IsCanceled {get; set;}
+        public bool IsCanceled {get; set;}  
         public ApplicationUser Lecturer { get; set; }
         [Required]
         public string LecturerId { get; set; }
@@ -22,7 +22,7 @@ namespace BigSchool.Models
         public Category Category { get; set; }
         [Required]
         
-        public byte CategoryId { get; internal set; }
+        public byte CategoryId { get; set; }
     }
  
 }

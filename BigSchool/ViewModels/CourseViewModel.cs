@@ -12,19 +12,21 @@ namespace BigSchool.ViewModels
         public int Id { get; set; }
         [Required]
         public string Place { get; set; }
-
         [Required]
         [FutureDate]
-        public string Date { get; set; }
 
+        public string Date { get; set; }
         [Required]
         [ValidTime]
-        public string Time { get; set; }
 
+        public string Time { get; set; }
         [Required]
+
         public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }
+
         public string Heading { get; set; }
+
         public string Action
         {
             get { return (Id != 0) ? "Update" : "Create"; }

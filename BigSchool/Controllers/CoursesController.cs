@@ -48,7 +48,7 @@ namespace BigSchool.Controllers
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Mine", "Course");
         }
 
         [Authorize]
@@ -99,7 +99,7 @@ namespace BigSchool.Controllers
             var viewModel = new CourseViewModel
             {
                 Categories = _dbContext.Categories.ToList(),
-                Date = course.DateTime.ToString("dd/M/yyyy"),
+                Date = course.DateTime.ToString("dd/MM/yyyy"),
                 Time = course.DateTime.ToString("HH:mm"),
                 Category = course.CategoryId,
                 Place = course.Place,
